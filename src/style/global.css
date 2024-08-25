@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   font-size: 18px;
   font-family: 'Oswald' ,Arial, Helvetica, sans-serif;
   margin: 50px 50px 0 50px;
+  overflow-x: hidden;
 }
 
 
@@ -301,7 +304,7 @@ body {
     flex-direction: column;
     align-items: start;
     z-index: 1;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     opacity: 0;
     transition: all 1s;
     border-radius: 0.5em;
