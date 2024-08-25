@@ -330,7 +330,7 @@ body {
 
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 600px) {
   body {
     margin: 20px;
   }
