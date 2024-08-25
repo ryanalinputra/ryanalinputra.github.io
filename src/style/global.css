@@ -354,7 +354,7 @@ body {
       ;
   }
   .gallery-1{
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
   
   .footer {
