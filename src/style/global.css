@@ -360,6 +360,6 @@ body {
   
   .footer {
     margin: 0 -20px -20px -20px ;
-  }
+    background-color: red;
 }
   
