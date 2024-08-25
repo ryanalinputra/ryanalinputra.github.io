@@ -330,10 +330,11 @@ body {
 
 }
 
-@media (max-width: 600px) {
-  body {
-    margin: 20px;
-  }
+@media (max-width: 400px) {
+body {
+  margin: 20px;
+
+}
   .header {
     grid-template-areas: 
     'hero hero'
@@ -358,7 +359,7 @@ body {
   }
   
   .footer {
-    margin: 0 -20px -20px -20px;
+    margin: 0 -20px -20px -20px ;
   }
 }
   
