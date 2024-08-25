@@ -40,13 +40,14 @@ body {
 .hero {
   grid-area: hero;
   min-height: 300px;
-  background-color: #F9F7F7;
+  background-image: url(https://media.dekoruma.com/homepage/furniture/furniture-landing-sofa.jpg?width=800&auto=webp);
   background-size: cover ;
   background-position: center;
   padding: 50px; 
   border-radius: 0.5em;
   border: 1px solid #aaa;
   box-shadow: 0 0 2px rgb(0, 0, 0, 0.3);
+
 }
 
 .hero h2,.hero p {
@@ -97,7 +98,7 @@ body {
   font-size: 1.2em;
   color: #ffffff;
   background-color: #556CD3;
-  width: 12em;
+  width: 13em;
   padding: 10px;
   border-radius: 0.5em;
   text-align: center;
@@ -292,7 +293,7 @@ body {
   .menu a {
     color:#ffffff;
   }
-  
+
   .menu ul {
     display: flex;
     position: absolute;
@@ -339,8 +340,12 @@ body {
     'features-1 features-2'
     ;
   }
+  .hero h2,.hero p {
+    width: 9em;
+    padding: 10px 20px 10px 20px;
+  }
   .features .price {
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 2000;
   }
   .services {
@@ -352,3 +357,4 @@ body {
     margin: 0 -20px -20px -20px;
   }
 }
+  
