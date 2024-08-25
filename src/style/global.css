@@ -279,7 +279,7 @@ body {
     grid-template-areas: 
       'service-1 service-2'
       'service-3 service-4';
-}
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -293,7 +293,6 @@ body {
   .menu a {
     color:#ffffff;
   }
-
   .menu ul {
     display: flex;
     position: absolute;
@@ -327,14 +326,12 @@ body {
   .about-menu {
     margin: 1em 0 0 1em;
   }
-
 }
 
 @media (max-width: 450px) {
-body {
-  margin: 20px;
-
-}
+  body {
+    margin: 20px;
+  }
   .header {
     grid-template-areas: 
     'hero hero'
@@ -357,7 +354,6 @@ body {
   .gallery-1{
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
-  
   .footer {
     margin: 0 -20px -20px -20px ;
     background-color: #333333;
