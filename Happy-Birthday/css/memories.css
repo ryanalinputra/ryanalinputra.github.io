@@ -127,12 +127,12 @@
             transform: translateY(-900px) rotate(600deg);
   }
 }
-/***                                  内容区域                                 ***/
-/**                                   第一部分                                  **/
-/*盒子*/
-/*PC端*/
+
 @media screen and (min-aspect-ratio: 10/9) {
 	.ly-box01 {
+		display: flex;
+		flex-wrap: wrap; /* Supaya teks tetap rapi meskipun tidak cukup lebar */
+		gap: 10px; /* Jarak antara elemen */
 		width:50px;
 		height:50px;
 		background-color:#FFF;
@@ -147,9 +147,10 @@
 	}
 }
 
-/*移动端*/
 @media screen and (max-aspect-ratio: 3/4){
 	.ly-box01 {
+		display: flex;
+		flex-wrap: wrap; /* Supaya teks tetap rapi meskipun tidak cukup lebar */
 		width:50px;
 		height:50px;
 		background-color:#FFF;
@@ -164,7 +165,6 @@
 	}
 }
 
-/** 移动端动画 **/
 @keyframes box_to_point_mobile{
 	0% {
 		margin-bottom:50%;
@@ -185,7 +185,6 @@
 		left: 48%;
 		bottom: 50%;
 	}
-	/*打开小球*/
 	14% {
 		margin-bottom:0;
 		width: 80%;
@@ -237,7 +236,6 @@
 		left: 48%;
 		bottom: 50%;
 	}
-	/*打开小球*/
 	14% {
 		margin-bottom:0;
 		width: 80%;
@@ -270,7 +268,6 @@
 	}
 }
 
-/** PC端动画 **/
 @keyframes box_to_point{
 	0% {
 		margin-bottom:50%;
@@ -429,7 +426,7 @@
 		left: 20%;
 	}
 }
-/*文本*/
+
 @media screen and (min-aspect-ratio: 10/9) {
 	.ly-txt01 {
 		position:absolute;
@@ -448,15 +445,17 @@
 
 @media screen and (max-aspect-ratio: 3/4) {
 	.ly-txt01 {
+		flex: 1; /* Membagi ukuran div secara proporsional */
 		position:absolute;
-		width: 40%;
-		left:10%;
+		width: 100%;
+		left:5%;
 		top:5%;
 	}
 	
 	.ly-txt02 {
+		flex: 1; /* Membagi ukuran div secara proporsional */
 		position:absolute;
-		width: 40%;
+		width: 100%;
 		left:15%;
 		top:50%;
 	}
@@ -777,8 +776,6 @@
 	90% {opacity:1;margin-top:0;}
 	100% {opacity:0;margin-top:0;}
 }
-/**                                      第二部分                                       **/
-/*时间轴的线*/
 
 .timeline {
 	width: 8px;
@@ -796,7 +793,6 @@
 	top:0;
 	transition-delay: 0.1s;
 }
-/*时间轴上的点*/
 .timepoint {
 	width: 20px;
 	height: 20px;
@@ -817,7 +813,6 @@
 	opacity: 1;
 	transition-delay: 2s;
 }
-/**时间轴上的点**/
 .timepoint11 {
 	width: 20px;
 	height: 20px;
@@ -839,19 +834,17 @@
 	transition-delay: 2s;
 }
 
-/* 盒子 */
-/*移动端*/
 @media screen and (max-aspect-ratio: 3/4) {
 	.ly-box11 {
 		width: 60%;
-		height: 45%;
-		border: 2px #CCC;
+		height: 25%;
 		background-color: #fff;
 		background-color: rgba(255,255,255,0.6);
+		border: 2px #CCC;
 		border-radius: 8px;
 		position: absolute;
 		left: 23%;
-		top:3%;
+		top:7%;
 		overflow: hidden;
 		opacity: 0;
 		-webkit-transform: scale(0.5, 0.5);
@@ -864,17 +857,16 @@
 		transform: scale(1, 1);
 		transition-delay: 2.5s;
 	}
-	/* 盒子 */
 	.ly-box12 {
 		width: 60%;
-		height: 40%;
+		height: 52%;
 		border: 2px #CCC;
 		background-color: #fff;
 		background-color: rgba(255,255,255,0.6);
 		border-radius: 8px;
 		position: absolute;
 		left: 23%;
-		top:52%;
+		top:42%;
 		overflow: hidden;
 		opacity: 0;
 		-webkit-transform: scale(0.5, 0.5);
@@ -894,7 +886,6 @@
 	.ly-box12 p {
 		font-size: 2.5vw !important;
 	}
-	/*小三角*/
 	.ly-triangle11 {
 		width: 0; 
 		height: 0; 
@@ -918,7 +909,6 @@
 		transform: scale(1, 1);
 		transition-delay: 3.5s;
 	}
-	/*小三角*/
 	.ly-triangle12 {
 		width: 0; 
 		height: 0; 
@@ -942,7 +932,6 @@
 		transform: scale(1, 1);
 		transition-delay: 6s;
 	}
-	/*图片*/
 	.ly-imgbox11{
 		position: absolute;
 		bottom: 0;
@@ -984,13 +973,11 @@
 	
 	.ly-txt12 {
 		font-family: Microsoft YaHei;
-		font-size: 20px;
-		text-indent:2em;
+		font-size: 30px;
 		font-color: #000;
 		position: absolute;
 		padding-top: 20px;
 		left: 5%;
-		top: 12%;
 		opacity: 0;
 		transition: all 1s;
 	}
@@ -1001,7 +988,6 @@
 	}
 	
 	
-	/*文本*/
 	.ly-txt13 {
 		font-family: Microsoft YaHei;
 		font-size: 30px;
@@ -1041,7 +1027,6 @@
 	}
 }
 
-/*电脑*/
 @media screen and (min-aspect-ratio: 10/9) {
 	.ly-box11 {
 		width: 30%;
@@ -1065,7 +1050,6 @@
 		transform: scale(1, 1);
 		transition-delay: 2.5s;
 	}
-	/*小三角*/
 	.ly-triangle11 {
 		width: 0; 
 		height: 0; 
@@ -1089,7 +1073,6 @@
 		transform: scale(1, 1);
 		transition-delay: 3.5s;
 	}
-	/*图片*/
 	.ly-imgbox11{
 		position: absolute;
 		bottom: 0;
@@ -1109,7 +1092,6 @@
 		width: 100%;
 		bottom: 0;
 	}
-	/*文本*/
 	.ly-txt11 {
 		font-family: Microsoft YaHei;
 		font-size: 30px;
@@ -1146,7 +1128,6 @@
 		transition-delay: 4s;
 	}
 	
-	/* 盒子 */
 	.ly-box12 {
 		width: 40%;
 		height: 600px;
@@ -1169,7 +1150,6 @@
 		transform: scale(1, 1);
 		transition-delay: 5s;
 	}
-	/*小三角*/
 	.ly-triangle12 {
 		width: 0; 
 		height: 0; 
@@ -1193,7 +1173,6 @@
 		transform: scale(1, 1);
 		transition-delay: 6s;
 	}
-	/*文本*/
 	.ly-txt13 {
 		font-family: Microsoft YaHei;
 		font-size: 30px;
@@ -1233,10 +1212,6 @@
 	}
 }
 
-
-/**                                        第三部分                                  **/
-
-/**时间轴上的点**/
 .timepoint21 {
 	width: 20px;
 	height: 20px;
@@ -1260,7 +1235,6 @@
 
 /* PC */
 @media screen and (min-aspect-ratio: 10/9) {
-	/* 盒子 */
 	.ly-box21 {
 		width: 15%;
 		height: 600px;
@@ -1283,7 +1257,6 @@
 		transform: scale(1, 1);
 		transition-delay: 2.5s;
 	}
-	/*小三角*/
 	.ly-triangle21 {
 		width: 0; 
 		height: 0; 
@@ -1307,7 +1280,6 @@
 		transform: scale(1, 1);
 		transition-delay: 3.5s;
 	}
-	/*图片*/
 	.ly-imgbox21{
 		position: absolute;
 		bottom: 0;
@@ -1328,7 +1300,6 @@
 		bottom: 0;
 	}
 	
-	/* 盒子 */
 	.ly-box22 {
 		width: 15%;
 		height: 510px;
@@ -1351,7 +1322,6 @@
 		transform: scale(1, 1);
 		transition-delay: 5s;
 	}
-	/*小三角*/
 	.ly-triangle22 {
 		width: 0; 
 		height: 0; 
@@ -1376,7 +1346,6 @@
 		transition-delay: 6s;
 	}
 	
-	/*图片*/
 	.ly-imgbox22{
 		position: absolute;
 		bottom: 0;
@@ -1397,7 +1366,6 @@
 		bottom: 0;
 	}
 	
-	/* 盒子 */
 	.ly-box23 {
 		width: 34%;
 		height: 0;
@@ -1416,7 +1384,6 @@
 		height:600px;
 		transition-delay: 8s;
 	}
-	/*小三角*/
 	.ly-triangle23 {
 		width: 0; 
 		height: 0; 
@@ -1440,7 +1407,6 @@
 		transform: scale(1, 1);
 		transition-delay: 12s;
 	}
-	/*图片*/
 	.ly-imgbox23{
 		position: absolute;
 		bottom: 0;
@@ -1461,12 +1427,10 @@
 		bottom: 0;
 	}
 }
-/* 移动端 */
 @media screen and (max-aspect-ratio: 3/4) {
-	/* 盒子 */
 	.ly-box21 {
 		width: 30%;
-		height: 40%;
+		height: 35%;
 		border: 2px #CCC;
 		background-color: #fff;
 		background-color: rgba(255,255,255,0.6);
@@ -1486,7 +1450,6 @@
 		transform: scale(1, 1);
 		transition-delay: 2.5s;
 	}
-	/*小三角*/
 	.ly-triangle21 {
 		width: 0; 
 		height: 0; 
@@ -1510,12 +1473,11 @@
 		transform: scale(1, 1);
 		transition-delay: 3.5s;
 	}
-	/*图片*/
 	.ly-imgbox21{
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 70%;
+		height: 80%;
 		border-radius: 8px;
 		opacity:0;
 		overflow: hidden;
@@ -1531,10 +1493,9 @@
 		bottom: 0;
 	}
 	
-	/* 盒子 */
 	.ly-box22 {
 		width: 30%;
-		height: 30%;
+		height: 29%;
 		border: 2px #CCC;
 		background-color: #fff;
 		background-color: rgba(255,255,255,0.6);
@@ -1554,7 +1515,6 @@
 		transform: scale(1, 1);
 		transition-delay: 5s;
 	}
-	/*小三角*/
 	.ly-triangle22 {
 		width: 0; 
 		height: 0; 
@@ -1579,7 +1539,6 @@
 		transition-delay: 6s;
 	}
 	
-	/*图片*/
 	.ly-imgbox22{
 		position: absolute;
 		bottom: 0;
@@ -1600,9 +1559,8 @@
 		bottom: 0;
 	}
 	
-	/* 盒子 */
 	.ly-box23 {
-		width: 60%;
+		width: 50%;
 		height: 0;
 		border: 2px #CCC;
 		background-color: #fff;
@@ -1610,16 +1568,15 @@
 		border-radius: 8px;
 		position: absolute;
 		left: 23%;
-		bottom: 4%;
+		bottom: 10%;
 		overflow: hidden;
 		opacity: 0.9;
 		transition: all 10s;
 	}
 	.active .ly-box23{
-		height: 45%;
+		height: 40%;
 		transition-delay: 8s;
 	}
-	/*小三角*/
 	.ly-triangle23 {
 		width: 0; 
 		height: 0; 
@@ -1643,12 +1600,11 @@
 		transform: scale(1, 1);
 		transition-delay: 12s;
 	}
-	/*图片*/
 	.ly-imgbox23{
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 80%;
+		height: 100%;
 		border-radius: 8px;
 		opacity:0;
 		overflow: hidden;
@@ -1656,7 +1612,7 @@
 	}
 	.active .ly-imgbox23{
 		opacity:1;
-		transition-delay:12s;
+		transition-delay:8s;
 	}
 	.ly-img23{
 		position: absolute;
@@ -1670,7 +1626,6 @@
 	}
 }
 
-/*文本*/
 .ly-txt21 {
 	font-family: Microsoft YaHei;
 	font-size: 30px;
@@ -1706,7 +1661,6 @@
 	transition-delay: 4s;
 }
 
-/*文本*/
 .ly-txt23 {
 	font-family: Microsoft YaHei;
 	font-size: 30px;
@@ -1744,7 +1698,6 @@
 	transition-delay: 7.0s;
 }
 
-/*文本*/
 .ly-txt25 {
 	font-family: Microsoft YaHei;
 	font-size: 30px;
@@ -1782,10 +1735,6 @@
 	transition-delay: 14s;
 }
 
-
-/**                                      第四部分                                    **/
-
-/**时间轴上的点**/
 .timepoint31 {
 	width: 20px;
 	height: 20px;
@@ -1807,9 +1756,7 @@
 	transition-delay: 2s;
 }
 
-/*移动端*/
 @media screen and (max-aspect-ratio: 3/4) {
-	/* 盒子 */
 	.ly-box31 {
 		width: 65%;
 		height: 60%;
@@ -1832,7 +1779,6 @@
 		transform: scale(1, 1);
 		transition-delay: 2.5s;
 	}
-	/* 盒子 */
 	.ly-box32 {
 		width: 50%;
 		height: 30%;
@@ -1856,7 +1802,6 @@
 		transition-delay: 5s;
 	}
 	
-	/*小三角*/
 	.ly-triangle31 {
 		width: 0; 
 		height: 0; 
@@ -1880,7 +1825,6 @@
 		transform: scale(1, 1);
 		transition-delay: 3.5s;
 	}
-	/*小三角*/
 	.ly-triangle32 {
 		width: 0; 
 		height: 0; 
@@ -1910,9 +1854,7 @@
 	}
 }
 
-/* PC端 */
 @media screen and (min-aspect-ratio: 10/9) {
-	/* 盒子 */
 	.ly-box31 {
 		width: 30%;
 		height: 600px;
@@ -1935,7 +1877,6 @@
 		transform: scale(1, 1);
 		transition-delay: 2.5s;
 	}
-	/* 盒子 */
 	.ly-box32 {
 		width: 40%;
 		height: 400px;
@@ -1959,7 +1900,6 @@
 		transition-delay: 5s;
 	}
 	
-	/*小三角*/
 	.ly-triangle31 {
 		width: 0; 
 		height: 0; 
@@ -1983,7 +1923,6 @@
 		transform: scale(1, 1);
 		transition-delay: 3.5s;
 	}
-	/*小三角*/
 	.ly-triangle32 {
 		width: 0; 
 		height: 0; 
@@ -2009,7 +1948,6 @@
 	}
 }
 
-/*图片*/
 .ly-imgbox31{
 	position: absolute;
 	bottom: 0;
@@ -2051,7 +1989,6 @@
 }
 
 
-/*文本*/
 .ly-txt31 {
 	font-family: Microsoft YaHei;
 	font-size: 30px;
@@ -2089,7 +2026,6 @@
 }
 
 
-/*文本*/
 .ly-txt33 {
 	font-family: Microsoft YaHei;
 	font-size: 30px;
@@ -2128,8 +2064,6 @@
 	transition-delay: 6.5s;
 }
 
-/**                                 第五部分                     **/
-/* PC端 */
 @media screen and (min-aspect-ratio: 10/9) {
 	.ly-box51 {
 		width: 34%;
@@ -2174,7 +2108,6 @@
 	}
 }
 
-/* 移动端 */
 @media screen and (max-aspect-ratio: 3/4) {
 	.ly-box51 {
 		width: 65%;
@@ -2242,7 +2175,6 @@
 }
 
 
-/**                             第六部分                          **/
 @media screen and (max-aspect-ratio: 3/4) {
 	.ly-imgbox61{
 		position: absolute;
@@ -2315,8 +2247,6 @@
 	-webkit-margin-after: 0.5em;
 }
 
-/**                               第七部分                             **/
-/* 移动端 */
 @media screen and (max-aspect-ratio: 3/4) {
 	.ly-box71 {
 		width: 35%;
@@ -2592,7 +2522,6 @@
 	opacity:1;
 	transition-delay: 7.0s;
 }
-/*图片*/
 .ly-imgbox71{
 	position: absolute;
 	bottom: 0;
@@ -2653,7 +2582,6 @@
 	opacity:1;
 	transition-delay: 9s;
 }
-/*图片*/
 .ly-imgbox72{
 	position: absolute;
 	bottom: 0;
@@ -2693,7 +2621,6 @@
 	opacity:1;
 	transition-delay: 13s;
 }
-/*图片*/
 .ly-imgbox73{
 	position: absolute;
 	bottom: 0;
@@ -2716,9 +2643,6 @@
 }
 
 
-/**                               第八部分                    **/
-
-/*移动端 */
 @media screen and (max-aspect-ratio: 3/4) {
 	.ly-box81 {
 		width: 65%;
@@ -2764,7 +2688,6 @@
 		transform: scale(1, 1);
 		transition-delay: 5s;
 	}
-	/*小三角*/
 	.ly-triangle82 {
 		width: 0; 
 		height: 0; 
@@ -2794,7 +2717,6 @@
 	}
 }
 
-/*PC端 */
 @media screen and (min-aspect-ratio: 10/9) {
 	.ly-box81 {
 		width: 15%;
@@ -2840,7 +2762,6 @@
 		transform: scale(1, 1);
 		transition-delay: 5s;
 	}
-	/*小三角*/
 	.ly-triangle82 {
 		width: 0; 
 		height: 0; 
@@ -2884,7 +2805,6 @@
 	opacity: 1;
 	transition-delay: 4s;
 }
-/*图片*/
 .ly-imgbox81{
 	position: absolute;
 	bottom: 0;
@@ -2904,7 +2824,6 @@
 	width: 100%;
 	bottom: 0;
 }
-/*文本*/
 .ly-txt84 {
 	text-indent:2em;
 	font-family: Microsoft YaHei;
@@ -2926,8 +2845,6 @@
 	transition-delay: 6.5s;
 }
 
-/**                           第九部分                          **/
-/*移动端*/
 @media screen and (max-aspect-ratio: 3/4) {
 	.ly-box91 {
 		width: 30%;
@@ -3055,7 +2972,6 @@
 		font-size: 2.5vw !important;
 	}
 }
-/*PC端*/
 @media screen and (min-aspect-ratio: 10/9) {
 	.ly-box91 {
 		width: 15%;
@@ -3276,7 +3192,6 @@
 	opacity:1;
 	transition-delay: 9s;
 }
-/*图片*/
 .ly-imgbox92{
 	position: absolute;
 	bottom: 0;
@@ -3316,7 +3231,6 @@
 	opacity:1;
 	transition-delay: 13s;
 }
-/*图片*/
 .ly-imgbox93{
 	position: absolute;
 	bottom: 0;
